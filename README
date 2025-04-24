@@ -1,0 +1,42 @@
+# SoftGen - Gestión Simplificada de Informes
+
+¡Hola! Este es el repositorio de **SoftGen**, proyecto web diseñado para facilitar la creación, visualización y gestión de informes, especialmente pensado para el sector de servicios técnicos.
+
+## Descripción
+
+SoftGen nació de la necesidad de agilizar el proceso de generación y aprobación de informes técnicos. La idea es ofrecer una plataforma intuitiva donde los técnicos puedan crear sus reportes fácilmente usando plantillas, los clientes puedan revisarlos y aprobarlos rápidamente, y los administradores tengan control sobre los usuarios y el flujo de trabajo.
+
+## ✨ Características Principales
+
+* **Inicio de Sesión por Roles:** Diferentes interfaces y permisos para Administradores, Técnicos y Clientes.
+* **Gestión de Usuarios (Admin):** Añadir, eliminar y gestionar permisos de técnicos y clientes. Visualización de estadísticas básicas (simulado).
+* **Creación de Informes (Técnico):**
+    * Acceso a herramientas para continuar informes existentes, empezar desde cero o usar plantillas.
+    * Exploración y selección de plantillas predefinidas.
+    * (Simulado) Edición y finalización de informes.
+* **Visualización y Aprobación (Cliente):**
+    * Listado de informes pendientes o completados.
+    * Visualización de detalles del informe (simulado con enlaces a PDF).
+    * Funcionalidad para aprobar informes.
+* **Sistema de Plantillas:**
+    * Navegación por plantillas categorizadas.
+    * Filtrado para encontrar rápidamente la plantilla necesaria.
+    * (Simulado) Opción de editar plantillas.
+* **Soporte Integrado:**
+    * Página de contacto con información del equipo.
+    * Chatbot básico para consultas rápidas.
+* **Interfaz Amigable:** Diseño basado en Bootstrap 5, buscando ser claro y fácil de usar.
+
+## 👤 Roles
+
+1.  **Administrador:** Gestiona usuarios (técnicos, clientes), supervisa la actividad general.
+2.  **Técnico:** Crea, edita y finaliza informes técnicos utilizando las herramientas y plantillas proporcionadas.
+3.  **Cliente:** Visualiza los informes generados para ellos, puede revisarlos y aprobarlos.
+
+## 💻 Tecnologías Utilizadas
+
+* HTML5
+* CSS3 (Bootstrap 5, estilos personalizados)
+* JavaScript (Vanilla JS, Bootstrap JS)
+* PHP (para la lógica del backend y la gestión de datos)
+* MySQL (base de datos para almacenar usuarios, informes y plantillas)

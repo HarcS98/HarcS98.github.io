@@ -1,0 +1,214 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña - SoftGen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/iniciosesion.css"> <link rel="icon" type="image/png" sizes="16x16" href="img/Logo Favicon 16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Logo favicon 1.0.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="img/Logo Favicon 180x180.png">
+    <style>
+        /* Ensure password mismatch error styling is present if not in CSS */
+        .password-mismatch {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 0.25rem;
+        }
+        /* Style for Bootstrap validation */
+        .form-control.is-invalid {
+            border-color: #dc3545; /* Bootstrap's danger color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo text-center">
+            <img src="img/Logo completo.png" class="m-3" alt="Logo SoftGen" height="90px">
+        </div>
+    </header>
+
+    <div class="container pt-5 main-content">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                 <div class="login-container text-center">
+                    <h3 class="mb-3">Restablecer Contraseña</h3>
+                    <hr>
+                    <p class="text-muted mb-4">Ingresa el código que recibiste por correo y tu nueva contraseña.</p>
+
+                    <div id="mensaje" class="mb-3"></div>
+
+                    <form id="resetPasswordForm"> <input type="hidden" name="token" id="token_from_url">
+
+                        <div class="mb-3">
+                            <label for="reset_code" class="visually-hidden">Código de Verificación</label>
+                            <input type="text" class="form-control" placeholder="Código de Verificación" name="reset_code" id="reset_code" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nueva_contrasena" class="visually-hidden">Nueva Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Nueva Contraseña" name="nueva_contrasena" id="nueva_contrasena" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmar_contrasena" class="visually-hidden">Confirmar Nueva Contraseña</label>
+                            <input type="password" class="form-control" placeholder="Confirmar Nueva Contraseña" name="confirmar_contrasena" id="confirmar_contrasena" required>
+                            <div id="passwordMismatchError" class="password-mismatch text-start" style="display: none;">
+                                Las contraseñas no coinciden.
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-primary">Restablecer Contraseña</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="iniciosesion.html" class="btn btn-link">Volver a Iniciar Sesión</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-white mt-auto" id="piePagina">
+         <div class="container py-5">
+        <div class="row">
+        <div class="col-md-4 mb-4">
+            <h5>Enlaces</h5>
+            <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="creacion.html" class="text-white text-decoration-none">Creación</a></li>
+            <li><a href="visualizacion.html" class="text-white text-decoration-none">Visualización</a></li>
+            <li><a href="soporte0.3.html" class="text-white text-decoration-none">Soporte</a></li> </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h5> Información de Contacto</h5>
+            <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt"></i> Dirección: Calle 90 #12-35, Bogotá, Colombia</li>
+            <li><i class="bi bi-telephone"></i> Teléfono: +57 312 857 7856</li>
+            <li><i class="bi bi-envelope"></i> Correo: info@jataair.com</li> </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+            <h5>Síguenos</h5>
+            <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/profile.php?id=61574843906898" class="text-white text-decoration-none"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li><a href="https://x.com/Softgen291521" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+            <li><a href="https://www.instagram.com/softg_en?igsh=amp3dmF3dzdqbWtq" class="text-white text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="text-center py-3" id="derechos">
+        <p class="mb-0">&copy; 2025 SoftGen. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const mensajeDiv = document.getElementById('mensaje');
+            const resetForm = document.getElementById('resetPasswordForm'); // Use the form ID
+            const resetCodeInput = document.getElementById('reset_code');
+            const passwordInput = document.getElementById('nueva_contrasena');
+            const confirmPasswordInput = document.getElementById('confirmar_contrasena');
+            const mismatchErrorDiv = document.getElementById('passwordMismatchError');
+
+            // --- Display messages from URL parameters (error/success) ---
+            if (params.has('error')) {
+                mensajeDiv.innerHTML = `<div class="alert alert-danger">${decodeURIComponent(params.get('error'))}</div>`;
+            } else if (params.has('exito')) {
+                mensajeDiv.innerHTML = `<div class="alert alert-success">${decodeURIComponent(params.get('exito'))}</div>`;
+                 // Optionally disable form fields after success
+                 // resetForm?.querySelectorAll('input, button').forEach(el => el.disabled = true);
+            }
+
+            // --- Add event listener for form submission ---
+            if(resetForm) {
+                resetForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent actual submission
+
+                    // Reset visual errors
+                    mismatchErrorDiv.style.display = 'none';
+                    confirmPasswordInput.classList.remove('is-invalid');
+                    passwordInput.classList.remove('is-invalid');
+                    resetCodeInput.classList.remove('is-invalid');
+
+                    let isValid = true;
+                    let firstErrorField = null;
+
+                    // --- Validation ---
+                    function showError(field, message, isPasswordMismatch = false) {
+                        if (isPasswordMismatch) {
+                            mismatchErrorDiv.style.display = 'block';
+                        } else {
+                             alert(message); // Simple alert for simulation
+                        }
+                         if (field) field.classList.add('is-invalid'); // Add Bootstrap invalid style
+                        isValid = false;
+                        if (!firstErrorField && field) {
+                            firstErrorField = field;
+                        }
+                    }
+
+                    // 1. Code (simulated: not empty)
+                    if (!resetCodeInput || resetCodeInput.value.trim() === "") {
+                        showError(resetCodeInput, 'Ingresa el código de verificación.');
+                    }
+                    // 2. New Password
+                    if (!passwordInput || passwordInput.value.trim() === "") {
+                        showError(passwordInput, 'Ingresa la nueva contraseña.');
+                    } else if (passwordInput.value.trim().length < 6) {
+                        showError(passwordInput, 'La contraseña debe tener al menos 6 caracteres.');
+                    }
+                    // 3. Confirm Password
+                    if (!confirmPasswordInput || confirmPasswordInput.value.trim() === "") {
+                        showError(confirmarContrasena, 'Confirma la nueva contraseña.');
+                    }
+                    // 4. Passwords Match (only if previous checks passed)
+                    if (isValid && passwordInput.value && confirmPasswordInput.value && passwordInput.value !== confirmPasswordInput.value) {
+                        showError(confirmPasswordInput, '', true); // Show specific mismatch error
+                    }
+
+
+                    // --- Success Simulation ---
+                    if (isValid) {
+                        console.log(`Simulating password reset with code: ${resetCodeInput.value}`);
+                         // Redirect to login page with success parameter
+                        window.location.href = 'iniciosesion.html?reset=exitoso';
+                    } else {
+                        if(firstErrorField) firstErrorField.focus();
+                    }
+                });
+
+                 // --- Real-time validation (optional but helpful) ---
+                confirmPasswordInput.addEventListener('input', function() {
+                    if (passwordInput.value !== confirmPasswordInput.value && confirmPasswordInput.value !== '') {
+                        mismatchErrorDiv.style.display = 'block';
+                        confirmPasswordInput.classList.add('is-invalid');
+                    } else {
+                        mismatchErrorDiv.style.display = 'none';
+                        confirmPasswordInput.classList.remove('is-invalid');
+                    }
+                });
+                passwordInput.addEventListener('input', function() {
+                    // Also check confirmation field when the main password changes
+                    if (confirmPasswordInput.value !== '' && passwordInput.value !== confirmPasswordInput.value) {
+                        mismatchErrorDiv.style.display = 'block';
+                        confirmPasswordInput.classList.add('is-invalid');
+                    } else if (confirmPasswordInput.value !== '') {
+                        mismatchErrorDiv.style.display = 'none';
+                        confirmPasswordInput.classList.remove('is-invalid');
+                    }
+                });
+            } else {
+                console.error("Reset password form not found.");
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* HEADER */
+header {
+  background-color: #e4f7ff;
+  height: 80px;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+body {
+  padding-top: 100px;
+  font-family: saira;
+}
+
+/* NAVBAR */
+.nav-link {
+  text-decoration: none;
+  color: #135787;
+  background-color: #e4f7ff;
+}
+
+.nav-link:hover {
+  font-size: 20px;
+  color: #000;
+  text-decoration: underline;
+}
+
+#navbarNav {
+  background-color: #e4f7ff;
+}
+
+.navbar-toggler {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+/* CHATBOT */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 300px;
+  z-index: 9998;
+}
+
+/* FOOTER */
+#piePagina {
+  background: linear-gradient(45deg, #135787, #1982c4);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#piePagina h5 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#piePagina ul {
+  padding: 0;
+  list-style: none;
+}
+
+#piePagina ul li {
+  margin: 8px 0;
+}
+
+#piePagina a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#piePagina a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+#piePagina i {
+  font-size: 1.3rem;
+  margin-right: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#piePagina a:hover i {
+  transform: scale(1.2);
+}
+
+#piePagina .col-md-4 {
+  margin-bottom: 20px;
+}
+
+#derechos {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* ==== Estilos para la sección de soporte ==== */
+.header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #135787;
+}
+
+.contact-box {
+  font-size: 1.1rem;
+  background-color: #e4f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.email {
+  font-weight: bold;
+  color: #0b4b6f;
+}
+
+.team .member {
+  width: 150px;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #1982c4;
+}
+
+.group-box {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #1982c4;
+}

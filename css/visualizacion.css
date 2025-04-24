@@ -1,0 +1,47 @@
+
+.card-folder {
+  text-align: center;
+  padding: 20px;
+}
+.folder-icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+#btn-primary {
+  background-color: #135787;
+  border-color: #135787; 
+  color: white;
+
+}
+#btn-primary:hover {
+  background-color: #4AA9D9; 
+  border-color: #4AA9D9; 
+  color: white; 
+}
+#btn-primary2 {
+  background-color: #4AA9D9;
+  border-color: #4AA9D9; 
+  color: white;
+
+}
+#btn-primary2:hover {
+  background-color: #135787; 
+  border-color: #135787; 
+  color: white; 
+}
+.icon-container {
+  margin-bottom: 10px; /* Espacio entre los iconos */
+}
+
+
+.card {
+  transition: transform 0.3s ease-in-out;
+  font-family: saira;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+
